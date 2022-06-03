@@ -1,0 +1,28 @@
+<div class="text-layout">
+    <h1>Decimal Pipe y Porcentaje</h1>
+    <p>Pipes para el manejo de decimales y porcentajes</p>
+</div>
+<div class="grid text-layout">
+    <div class="col-4 text-layout ">
+        <p-card header="Ventas Netas"
+            subheader="del presente año">
+            <i class="pi pi-dollar"></i>
+            {{ ventasNetas | number:'1.2-2' }}
+
+        </p-card>
+    </div>
+    <div class="col-4 text-layout ">
+        <p-card header="Ventas Brutas"
+            subheader="del presente año">
+            {{ ventasNetas + 200000 | currency:'CAD':'symbol-narrow':'1.4-4' }}
+
+        </p-card>
+    </div>
+    <div class="col-4 text-layout ">
+        <p-card header="Ganancia Porcentual"
+            subheader="del presente año">
+            {{ porcentaje | percent:'2.2-2' }}
+
+        </p-card>
+    </div>
+</div>
